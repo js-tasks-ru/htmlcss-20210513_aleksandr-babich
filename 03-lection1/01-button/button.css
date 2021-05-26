@@ -1,1 +1,103 @@
 /* Стилизация кнопки */
+:root {
+    --button-width: 182px;
+    --button-height: 48px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ACB5BD;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: calc(var(--button-width, 182px) * 3 + 60px);
+    height: calc(var(--button-height, 48px) * 3 + 40px);
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap
+}
+
+.button {
+    height: var(--button-height, 48px);
+    width: var(--button-width, 182px);
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--white, #ffffff);
+
+    -webkit-transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+    -moz-transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+    -o-transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+}
+
+.button_primary {
+    background: #4263EB;
+    border-color: #4263EB;
+}
+
+.button_primary:hover {
+    background: #2342C0;
+}
+
+.button_primary:disabled {
+    background: #4263EB;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button_secondary {
+    background: #7048E8;
+    border-color: #7048E8;
+}
+
+.button_secondary:hover {
+    background: #5028C6;
+}
+
+.button_secondary:disabled {
+    background: #7048E8;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button_alternate {
+    box-sizing: border-box;
+    color: var(--black, #212429);
+    background: var(--white, #ffffff);
+    border: 1px solid #ACB5BD;
+}
+
+.button_alternate:hover {
+    border: 1px solid #212429;
+}
+
+.button_alternate:disabled {
+    border: 1px solid #ACB5BD;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
