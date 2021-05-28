@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <!-- Страница с кнопкой -->
+<style>
+    .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .item {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #ACB5BD;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        width: calc(var(--button-width, 182px) * 3 + 60px);
+        height: calc(var(--button-height, 48px) * 3 + 40px);
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap:wrap
+    }
+</style>
 <html lang="ru">
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./button.css">
+        <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
     </head>
-    <body>
-
+    <body class="wrapper">
+        <div class="titles">
+            <span class="item">Buttons</span>
+        </div>
+        <div class="buttons">
+            <button class="button button_primary">Primary</button>
+            <button class="button button_secondary">Secondary</button>
+            <button class="button button_alternate">Alternate</button>
+        </div>
     </body>
 </html>
